@@ -1,17 +1,31 @@
 <tr>
     <td>
-        <?= $movie->getTitle() ?>
+        <?= $production->getTitle() ?>
     </td>
     <td>
-        <?= $movie->language ?>
+        <?= $production->language ?>
     </td>
     <td>
-        <?= $movie->vote ?>
+        <?= $production->vote ?>
     </td>
     <td>
-        <?= $movie->genre->getGenre() ?>
+        <?= $production->genre->getGenre() ?>
     </td>
     <td>
-        <?= $movie->genre->description ?>
+        <?= $production->genre->description ?>
     </td>
+    <?php if ($production instanceof Movie): ?>
+        <td>
+            <?= $production->profit ?>
+        </td>
+        <td>
+            <?= $production->duration ?>
+        </td>
+    <?php endif; ?>
+
+    <?php if ($production instanceof SerieTv): ?>
+        <td>
+            <?= $production->seasons ?>
+        </td>
+    <?php endif; ?>
 </tr>
