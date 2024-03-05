@@ -6,19 +6,19 @@ class Production
     public $language;
     public $vote;
 
-    public $genre;
+    public $genres;
 
 
     public function __construct(
         string $title,
         string $language,
         int $vote,
-        Genre $genre,
+        array $genres,
     ) {
         $this->title = $title;
         $this->language = $language;
         $this->vote = $vote;
-        $this->genre = $genre;
+        $this->genres = $genres;
     }
 
     public function getTitle()

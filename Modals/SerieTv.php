@@ -10,10 +10,10 @@ class SerieTv extends Production
         string $title,
         string $language,
         int $vote,
-        Genre $genre,
+        array $genres,
         $seasons
     ) {
-        parent::__construct($title, $language, $vote, $genre);
+        parent::__construct($title, $language, $vote, $genres);
 
         $this->seasons = $seasons;
     }

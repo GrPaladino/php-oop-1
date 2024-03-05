@@ -9,23 +9,27 @@
         <?= $production->vote ?>
     </td>
     <td>
-        <?= $production->genre->getGenre() ?>
+        <?php foreach ($production->genres as $genre): ?>
+            <?= $genre->getGenre() ?> <br />
+        <?php endforeach; ?>
     </td>
     <td>
-        <?= $production->genre->description ?>
+        <?php foreach ($production->genres as $genre): ?>
+            <?= $genre->description ?>
+        <?php endforeach; ?>
     </td>
-    <?php if ($production instanceof Movie): ?>
-        <td>
-            <?= $production->profit ?>
-        </td>
-        <td>
-            <?= $production->duration ?>
-        </td>
-    <?php endif; ?>
 
-    <?php if ($production instanceof SerieTv): ?>
-        <td>
-            <?= $production->seasons ?>
-        </td>
-    <?php endif; ?>
+    <td>
+        <?= isset($production->profit) ? $production->profit : ' ' ?>
+    </td>
+
+    <td>
+        <?= isset($production->duration) ? $production->duration : ' ' ?>
+    </td>
+
+    <td>
+        <?= isset($production->seasons) ? $production->seasons : ' ' ?>
+    </td>
+
+
 </tr>

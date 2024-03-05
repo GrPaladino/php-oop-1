@@ -10,7 +10,7 @@ $productions = [
         'Harry Potter e la pietra filosofare',
         'italiano',
         8,
-        new Genre('Fantasy', 'Lorem ipsum ........'),
+        [new Genre('Fantasy', 'Lorem ipsum ........'), new Genre('Teen', '')],
         1.874,
         120,
     ),
@@ -19,7 +19,7 @@ $productions = [
         'Il Gladiatore',
         'inglese',
         9,
-        new Genre('History', 'Lorem ipsum dolorae ...............'),
+        [new Genre('History', 'Lorem ipsum dolorae ...............')],
         109.737,
         240,
     ),
@@ -28,7 +28,7 @@ $productions = [
         'Vieni avanti cretino',
         'italiano',
         10,
-        new Genre('Comic', 'Il mitico Lino Banfi........'),
+        [new Genre('Comic', 'Il mitico Lino Banfi........')],
         6.331,
         200
     ),
@@ -37,7 +37,7 @@ $productions = [
         'Breaking bads',
         'inglese',
         8,
-        new Genre('Drama', 'Qualcosa...'),
+        [new Genre('Drama', 'Qualcosa...'), new Genre('Prison', '')],
         12
 
     ),
@@ -45,7 +45,7 @@ $productions = [
         'Scrubs',
         'inglese',
         9,
-        new Genre('Thriller', 'Qualcosa...'),
+        [new Genre('Thriller', 'Qualcosa...')],
         4
 
     ),
@@ -53,7 +53,7 @@ $productions = [
         'Lost',
         'inglese',
         5,
-        new Genre('Drama', 'Qualcosa...'),
+        [new Genre('Drama', 'Qualcosa...'), new Genre('History', '')],
         27
 
     )
